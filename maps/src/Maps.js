@@ -31,6 +31,8 @@ const Maps = () => {
             center: [latitude, longitude],
             zoom: zoom
         });
+
+        map.addControl(new mapboxgl.NavigationControl(), 'top-right');
     }, []);
 
     return(

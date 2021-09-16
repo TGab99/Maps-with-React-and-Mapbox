@@ -10,12 +10,12 @@ const Maps = () => {
     const [latitude, setLatitude] = useState(0);
     const [zoom, setZoom] = useState(5);
 
-    function successLocation(position){
+    function successPosition(position){
         setLongitude(position.coords.longitude);
         setLatitude(position.coords.latitude);
     }
 
-    function errorLocation(){
+    function errorPosition(){
         setLongitude(12.9716);
         setLatitude(77.5946);
     }

@@ -10,6 +10,11 @@ const Maps = () => {
     const [latitude, setLatitude] = useState(0);
     const [zoom, setZoom] = useState(5);
 
+    function successLocation(position){
+        setLongitude(position.coords.longitude);
+        setLatitude(position.coords.latitude);
+    }
+
     return(
         <div>
             <div className="map_container" ref={mapContainerRef}/>

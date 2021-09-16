@@ -15,6 +15,11 @@ const Maps = () => {
         setLatitude(position.coords.latitude);
     }
 
+    function errorLocation(){
+        setLongitude(12.9716);
+        setLatitude(77.5946);
+    }
+
     return(
         <div>
             <div className="map_container" ref={mapContainerRef}/>

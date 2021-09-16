@@ -1,8 +1,11 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import './Maps.css';
 
 const Maps = () => {
     const mapContainerRef = useRef(null);
+    const [longitude, setLongitude] = useState(0);
+    const [latitude, setLatitude] = useState(0);
+    const [zoom, setZoom] = useState(5);
 
     return(
         <div>

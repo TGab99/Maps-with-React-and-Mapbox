@@ -33,6 +33,12 @@ const Maps = () => {
         });
 
         map.addControl(new mapboxgl.NavigationControl(), 'top-right');
+
+        map.on("move", () => {
+            setLongitude(map.getCenter().longitude);
+            setLatitude(map.getCenter().latitude);
+            setZoom(map.getZoom().toFixed(2));
+        });
     }, []);
 
     return(

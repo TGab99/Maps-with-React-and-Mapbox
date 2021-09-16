@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import * as mapboxgl from 'mapbox-gl';
 import './Maps.css';
 
@@ -23,6 +23,15 @@ const Maps = () => {
         setLongitude(12.9716);
         setLatitude(77.5946);
     }
+
+    useEffect(() => {
+        const map = new mapboxgl.Map({
+            container: mapContainerRef.current,
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [latitude, longitude],
+            zoom: zoom
+        });
+    }, []);
 
     return(
         <div>

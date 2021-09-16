@@ -1,5 +1,6 @@
 import React, {useRef, useState, useEffect} from 'react';
 import * as mapboxgl from 'mapbox-gl';
+import MapBoxDirections from '@mapbox/mapbox-gl-directions';
 import './Maps.css';
 
 mapboxgl.accessToken = '';
@@ -39,6 +40,8 @@ const Maps = () => {
             setLatitude(map.getCenter().latitude);
             setZoom(map.getZoom().toFixed(2));
         });
+
+        return () => map.remove();
     }, []);
 
     return(

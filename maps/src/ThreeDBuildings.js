@@ -10,6 +10,13 @@ const ThreeDBuildings = () => {
     const [zoom, setZoom] = useState(5);
 
     useEffect(() => {
+        const map = new mapboxgl.Map({
+            container: buildingsContainerRef.current,
+            style: 'mapbox://styles/mapbox/light-v10',
+            center: [latitude, longitude],
+            zoom: zoom
+        });
+
         return({});
     })
 

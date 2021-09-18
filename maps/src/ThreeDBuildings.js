@@ -9,6 +9,10 @@ const ThreeDBuildings = () => {
     const [latitude, setLatitude] = useState(0);
     const [zoom, setZoom] = useState(5);
 
+    navigator.geolocation.getCurrentPosition(successPosition, errorPosition, {
+        enableHighAccuracy: true,
+    });
+
     function successPosition(position){
         setLongitude(position.coords.longitude);
         setLatitude(position.coords.latitude);

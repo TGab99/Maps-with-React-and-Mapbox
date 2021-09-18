@@ -9,6 +9,16 @@ const ThreeDBuildings = () => {
     const [latitude, setLatitude] = useState(0);
     const [zoom, setZoom] = useState(5);
 
+    function successPosition(position){
+        setLongitude(position.coords.longitude);
+        setLatitude(position.coords.latitude);
+    }
+
+    function errorPosition(){
+        setLongitude(12.9716);
+        setLatitude(77.5946);
+    }
+
     useEffect(() => {
         const map = new mapboxgl.Map({
             container: buildingsContainerRef.current,

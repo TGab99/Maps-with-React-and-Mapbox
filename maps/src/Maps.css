@@ -5,3 +5,12 @@
     right: 0;
     left: 0;
 }
+
+.menu {
+    position: absolute;
+    background: #efefef;
+    padding: 10px;
+    margin-left: 500px;
+    font-family: 'Open Sans', sans-serif;
+    opacity: 0.5;
+}

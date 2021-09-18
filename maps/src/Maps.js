@@ -55,6 +55,18 @@ const Maps = () => {
     return(
         <div>
             <div className="map_container" ref={mapContainerRef}/>
+            <form className="menu">
+                <input id="satellite-v9" type="radio" name="rtoggle" value="satellite"/>
+                <label for="satellite-v9">satellite</label>
+                <input id="light-v10" type="radio" name="rtoggle" value="light"/>
+                <label for="light-v10">light</label>
+                <input id="dark-v10" type="radio" name="rtoggle" value="dark"/>
+                <label for="dark-v10">dark</label>
+                <input id="streets-v10" type="radio" name="rtoggle" value="streets"/>
+                <label for="streets-v10">streets</label>
+                <input id="outdoors-v10" type="radio" name="rtoggle" value="outdoors"/>
+                <label for="outdoors-v10">outdoors</label>
+            </form>
         </div>
     );
 }

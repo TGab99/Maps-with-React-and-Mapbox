@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import * as mapboxgl from 'mapbox-gl';
 
 mapboxgl.accessToken = '';
@@ -8,6 +8,12 @@ const ThreeDBuildings = () => {
     const [longitude, setLongitude] = useState(0);
     const [latitude, setLatitude] = useState(0);
     const [zoom, setZoom] = useState(5);
+
+    useEffect = () => {
+        return({
+            
+        });
+    }
 
     return(
         <div>

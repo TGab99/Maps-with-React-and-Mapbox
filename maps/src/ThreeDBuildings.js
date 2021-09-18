@@ -8,7 +8,6 @@ const ThreeDBuildings = () => {
     const buildingsContainerRef = useRef(null);
     const [longitude, setLongitude] = useState(0);
     const [latitude, setLatitude] = useState(0);
-    const [zoom, setZoom] = useState(5);
 
     navigator.geolocation.getCurrentPosition(successPosition, errorPosition, {
         enableHighAccuracy: true,
@@ -29,7 +28,10 @@ const ThreeDBuildings = () => {
             container: buildingsContainerRef.current,
             style: 'mapbox://styles/mapbox/light-v10',
             center: [latitude, longitude],
-            zoom: zoom
+            zoom: 15.5,
+            pitch: 45,
+            bearing: -17.6,
+            antialias: true
         });
 
         return() => map.remove();

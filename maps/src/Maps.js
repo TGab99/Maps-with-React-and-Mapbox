@@ -12,6 +12,10 @@ const Maps = () => {
     const [zoom, setZoom] = useState(5);
     const mapContainerRef = useRef(null);
 
+    navigator.geolocation.getCurrentPosition(successPosition, errorPosition, {
+      enableHighAccuracy: true,
+    });
+
     function successPosition(position){
         setLongitude(position.coords.longitude);
         setLatitude(position.coords.latitude);

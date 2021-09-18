@@ -1,4 +1,7 @@
 import React, {useRef, useState} from 'react';
+import * as mapboxgl from 'mapbox-gl';
+
+mapboxgl.accessToken = '';
 
 const ThreeDBuildings = () => {
     const buildingsContainerRef = useRef(null);

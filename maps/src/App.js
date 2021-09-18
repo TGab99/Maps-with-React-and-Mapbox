@@ -5,7 +5,7 @@ import ThreeDBuildings from './ThreeDBuildings';
 function App(){
     return(
         <div>
-            <ThreeDBuildings/>
+            <Maps/>
         </div>
     );
 }

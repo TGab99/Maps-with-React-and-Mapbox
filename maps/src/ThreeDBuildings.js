@@ -9,11 +9,9 @@ const ThreeDBuildings = () => {
     const [latitude, setLatitude] = useState(0);
     const [zoom, setZoom] = useState(5);
 
-    useEffect = () => {
-        return({
-            
-        });
-    }
+    useEffect(() => {
+        return({});
+    })
 
     return(
         <div>

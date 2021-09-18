@@ -1,5 +1,6 @@
 import React, {useRef, useState, useEffect} from 'react';
 import * as mapboxgl from 'mapbox-gl';
+import './ThreeDBuildings.css';
 
 mapboxgl.accessToken = '';
 
@@ -31,7 +32,7 @@ const ThreeDBuildings = () => {
             zoom: zoom
         });
 
-        return({});
+        return() => map.remove();
     })
 
     return(
